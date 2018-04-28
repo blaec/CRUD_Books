@@ -1,6 +1,6 @@
 package org.javarush.CrudBook.service;
 
-import org.javarush.CrudBook.dao.BookDao;
+import org.javarush.CrudBook.repository.BookDao;
 import org.javarush.CrudBook.model.Book;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

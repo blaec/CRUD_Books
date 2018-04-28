@@ -1,4 +1,4 @@
-package org.javarush.CrudBook.dao;
+package org.javarush.CrudBook.repository;
 
 import org.javarush.CrudBook.model.Book;
 import org.hibernate.Session;
@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository

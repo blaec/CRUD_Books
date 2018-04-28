@@ -1,4 +1,4 @@
-package org.javarush.CrudBook.dao;
+package org.javarush.CrudBook.repository;
 
 
 import org.javarush.CrudBook.model.Book;

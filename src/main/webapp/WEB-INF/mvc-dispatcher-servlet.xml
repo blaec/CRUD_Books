@@ -45,7 +45,7 @@
     </bean>
 
     <!--BookDao and BookService beans-->
-    <bean id="bookDao" class="org.javarush.CrudBook.dao.BookDaoImpl">
+    <bean id="bookDao" class="org.javarush.CrudBook.repository.BookDaoImpl">
         <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/>
     </bean>
 
