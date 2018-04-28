@@ -1,4 +1,4 @@
-package org.javarush.CrudBook.controller;
+package org.javarush.CrudBook.web;
 
 import org.javarush.CrudBook.model.Book;
 import org.javarush.CrudBook.service.BookService;
