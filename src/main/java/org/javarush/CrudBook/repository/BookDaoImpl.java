@@ -35,7 +35,7 @@ public class BookDaoImpl implements BookDao {
     @Override
     public void removeBook(int id) {
         Session session = this.sessionFactory.getCurrentSession();
-        Book book = (Book) session.load(Book.class, id);
+        Book book = getBookById(id);
 
         if(book != null){
             session.delete(book);
@@ -48,10 +48,7 @@ public class BookDaoImpl implements BookDao {
     public void makeRead(boolean isUpdate, Book book) {
         Session session = this.sessionFactory.getCurrentSession();
 
-        if (isUpdate)
-            book.setReadAlready(false);
-        else
-            book.setReadAlready(true);
+        book.setReadAlready(!isUpdate);
         session.update(book);
 
         logger.info("Book was read. Book details: " + book);
@@ -60,7 +57,7 @@ public class BookDaoImpl implements BookDao {
     @Override
     public Book getBookById(int id) {
         Session session =this.sessionFactory.getCurrentSession();
-        Book book = (Book) session.load(Book.class, id);
+        Book book = session.load(Book.class, id);
         logger.info("Book successfully loaded by id. Book details: " + book);
 
         return book;
